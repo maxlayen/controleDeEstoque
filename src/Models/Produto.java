@@ -1,17 +1,24 @@
-    
 package Models;
-
 
 public class Produto {
     
     private String nome;
     private String unidade;
-    private String localizacaoA;
     private int estoqueMinimo;
     private int quantidadeEstoque;
     private double valorAquisicao;
     private double custoUnitario;
     private double custoTotal;
+
+    public Produto(String nome, String unidade, int estoqueMinimo, int quantidadeEstoque, double valorAquisicao, double custoUnitario, double custoTotal) {
+        this.nome = nome;
+        this.unidade = unidade;
+        this.estoqueMinimo = estoqueMinimo;
+        this.quantidadeEstoque = quantidadeEstoque;
+        this.valorAquisicao = valorAquisicao;
+        this.custoUnitario = custoUnitario;
+        this.custoTotal = custoTotal;
+    }
     
     
     public String getNome() {
@@ -28,14 +35,6 @@ public class Produto {
 
     public void setUnidade(String unidade) {
         this.unidade = unidade;
-    }
-
-    public String getLocalizacaoA() {
-        return localizacaoA;
-    }
-
-    public void setLocalizacaoA(String localizacaoA) {
-        this.localizacaoA = localizacaoA;
     }
 
     public int getEstoqueMinimo() {
