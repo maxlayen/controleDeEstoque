@@ -24,6 +24,38 @@ public class ProdutoDAO {
     public ArrayList<Produto> listarProdutos() {
         return produtos;
     }
+    
+    public Produto procurarProduto(int codigoProduto){
+        for (Produto produto : produtos) {
+            if (produto.getCodigo() == codigoProduto) {
+                return produto;
+            }
+        }
+        
+        return null;
+    }
+    
+    public void atualizarProduto(Produto p){
+        // Buscar o produto no arraylist
+        Produto produto = procurarProduto(p.getCodigo());
+        
+        produto.setNome(p.getNome());
+        produto.setUnidade(p.getUnidade());
+        produto.setEstoqueMinimo(p.getEstoqueMinimo());
+        produto.setQuantidadeEstoque(p.getQuantidadeEstoque());
+        produto.setValorAquisicao(p.getValorAquisicao());
+        produto.setCustoUnitario(p.getCustoUnitario());
+        produto.setCustoTotal(p.getCustoTotal());
+        
+        gravarArquivo();
+    }
+    
+    public void removerProduto(Produto p){
+        Produto produto = procurarProduto(p.getCodigo());
+        produtos.remove(produto);
+        gravarArquivo();
+    }
+        
 
     private void gravarArquivo() {
         File f = new File(ARQUIVO_DE_PRODUTOS);
@@ -36,7 +68,7 @@ public class ProdutoDAO {
             bw = new BufferedWriter(fw);
 
             for (Produto c : produtos) {
-                bw.write(c.getNome() + ";" + c.getUnidade() + ";" + c.getEstoqueMinimo() + ";" + c.getQuantidadeEstoque()
+                bw.write(c.getNome() + ";" + c.getUnidade() + ";" + c.getCodigo() + ";" + c.getEstoqueMinimo() + ";" + c.getQuantidadeEstoque()
                         + ";" + c.getValorAquisicao() + ";" + c.getCustoUnitario() + ";" + c.getCustoTotal());
                 bw.newLine();
             }
@@ -70,8 +102,8 @@ public class ProdutoDAO {
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(";");
 
-                Produto produto = new Produto(dados[0], dados[1], Integer.parseInt(dados[2]), Integer.parseInt(dados[3]),
-                        Double.parseDouble(dados[4]), Double.parseDouble(dados[5]), Double.parseDouble(dados[6]));
+                Produto produto = new Produto(dados[0], dados[1], Integer.parseInt(dados[2]), Integer.parseInt(dados[3]), Integer.parseInt(dados[4]),
+                        Double.parseDouble(dados[5]), Double.parseDouble(dados[6]), Double.parseDouble(dados[7]));
                 produtos.add(produto);
             }
         } catch (FileNotFoundException e) {
