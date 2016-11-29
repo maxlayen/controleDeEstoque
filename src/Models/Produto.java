@@ -4,20 +4,27 @@ public class Produto {
     
     private String nome;
     private String unidade;
+    private int codigo;
     private int estoqueMinimo;
     private int quantidadeEstoque;
     private double valorAquisicao;
     private double custoUnitario;
     private double custoTotal;
+    
 
-    public Produto(String nome, String unidade, int estoqueMinimo, int quantidadeEstoque, double valorAquisicao, double custoUnitario, double custoTotal) {
+    public Produto(String nome, String unidade, int codigo, int estoqueMinimo, int quantidadeEstoque, double valorAquisicao, double custoUnitario, double custoTotal) {
         this.nome = nome;
         this.unidade = unidade;
+        this.codigo = codigo;
         this.estoqueMinimo = estoqueMinimo;
         this.quantidadeEstoque = quantidadeEstoque;
         this.valorAquisicao = valorAquisicao;
         this.custoUnitario = custoUnitario;
         this.custoTotal = custoTotal;
+        
+    }
+    
+    public Produto(){
     }
     
     
@@ -35,6 +42,14 @@ public class Produto {
 
     public void setUnidade(String unidade) {
         this.unidade = unidade;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public int getEstoqueMinimo() {
