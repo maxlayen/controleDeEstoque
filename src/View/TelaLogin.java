@@ -151,7 +151,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         String verifyPassword = new String(txtPassword.getPassword());
-        if (txtLogin.getText() == funcionario.getLogin() && verifyPassword == funcionario.getPassword()) {
+        if (txtLogin.getText().equals(funcionario.getLogin()) && verifyPassword.equals(funcionario.getLogin())) {
             this.dispose();
             new TelaInicial().setVisible(true);
         }
