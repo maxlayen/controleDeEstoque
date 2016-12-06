@@ -7,7 +7,9 @@ package View;
 
 import Persistence.ProdutoDAO;
 import Models.Produto;
+import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author maxna
@@ -64,10 +66,7 @@ public class ListarProdutos extends javax.swing.JFrame {
 
         lista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Produto", "Unidade", "Mínimo", "Quantidade", "Valor de Aquisição", "Custo Unitário", "Lucro"
@@ -170,6 +169,8 @@ public class ListarProdutos extends javax.swing.JFrame {
             }
         });
     }
+    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
@@ -178,7 +179,7 @@ public class ListarProdutos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable lista;
+    private static javax.swing.JTable lista;
     private javax.swing.JTextField txtProcurar;
     // End of variables declaration//GEN-END:variables
 }
