@@ -44,10 +44,10 @@ public class FuncionarioDAO {
         // Buscar o produto no arraylist
         Funcionario funcionario = procurarFuncionario(f.getLogin());
         
-        f.setNome(f.getNome());
-        f.setLogin(f.getLogin());
-        f.setPassword(f.getPassword());
-        f.setTelefone(f.getTelefone());
+        funcionario.setNome(f.getNome());
+        funcionario.setLogin(f.getLogin());
+        funcionario.setPassword(f.getPassword());
+        funcionario.setTelefone(f.getTelefone());
         
         gravarArquivo();
     }
@@ -70,7 +70,7 @@ public class FuncionarioDAO {
             bw = new BufferedWriter(fw);
 
             for (Funcionario c : funcionarios) {
-                bw.write(c.getNome() + ";" + c.getCpf() + ";" + c.getLogin() + ";" + c.getPassword() + ";" + c.getTelefone());
+                bw.write(c.getLogin() + ";" + c.getPassword() + ";" + c.getTelefone() + ";" + c.getNome() + ";" + c.getCpf());
                 bw.newLine();
             }
         } catch (IOException e) {
