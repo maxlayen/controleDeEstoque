@@ -5,8 +5,8 @@
         <group>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/ControleDeEstoque/src/View/ListarProdutos.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/ControleDeEstoque/src/Models/Produto.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/ControleDeEstoque/src/Persistence/FuncionarioDAO.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/ControleDeEstoque/src/View/CadastroProduto.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/ControleDeEstoque/src/Persistence/ProdutoDAO.java</file>
         </group>
     </open-files>
 </project-private>
