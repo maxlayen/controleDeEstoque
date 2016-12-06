@@ -6,14 +6,13 @@
 package View;
 
 import Models.Funcionario;
+import Persistence.FuncionarioDAO;
 
 /**
  *
  * @author maxna
  */
 public class TelaLogin extends javax.swing.JFrame {
-    
-    Funcionario funcionario = new Funcionario();
 
     /**
      * Creates new form TelaInicial
@@ -150,11 +149,20 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLoginActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        String verifyPassword = new String(txtPassword.getPassword());
-        if (txtLogin.getText().equals(funcionario.getLogin()) && verifyPassword.equals(funcionario.getLogin())) {
-            this.dispose();
-            new TelaInicial().setVisible(true);
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+
+        String login = txtLogin.getText();
+        String password = new String(txtPassword.getPassword());
+
+        Funcionario f = funcionarioDAO.getFuncionarioByLogin(login);
+
+        if (f != null) {
+            if (f.getPassword().equals(password)) {
+                new TelaInicial().setVisible(true);
+                this.dispose();
+            }
         }
+
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroActionPerformed

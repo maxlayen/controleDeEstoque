@@ -167,7 +167,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         String loginFuncionario = txtLogin.getText();
         String passwordFuncionario = new String(txtPassword.getPassword());
 
-        Funcionario funcionario = new Funcionario(nomeFuncionario, cpfFuncionario, telefoneFuncionario, loginFuncionario, passwordFuncionario);
+        Funcionario funcionario = new Funcionario(loginFuncionario, passwordFuncionario, telefoneFuncionario, nomeFuncionario, cpfFuncionario);
         funcionarioDAO.cadastrar(funcionario);
         
         this.dispose();

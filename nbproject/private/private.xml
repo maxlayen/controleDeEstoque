@@ -5,9 +5,10 @@
         <group>
             <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/View/TelaLogin.java</file>
             <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/Persistence/FuncionarioDAO.java</file>
+            <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/Persistence/ProdutoDAO.java</file>
             <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/View/CadastroFuncionario.java</file>
-            <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/View/TelaInicial.java</file>
-            <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/View/CadastroProduto.java</file>
+            <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/Models/Funcionario.java</file>
+            <file>file:/C:/Users/maxna/OneDrive/Documentos/NetBeansProjects/Controle%20de%20estoque/src/Models/Produto.java</file>
         </group>
     </open-files>
 </project-private>
