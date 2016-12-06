@@ -103,7 +103,7 @@ public class FuncionarioDAO {
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(";");
 
-                Funcionario funcionario = new Funcionario(dados[0], dados[1], dados[2], dados[3], dados[4]);
+                Funcionario funcionario = new Funcionario(dados[1], dados[2], dados[3], dados[4], dados[5]);
                 funcionarios.add(funcionario);
             }
         } catch (FileNotFoundException e) {
@@ -119,4 +119,4 @@ public class FuncionarioDAO {
             }
         }
     }
-}
+}   
