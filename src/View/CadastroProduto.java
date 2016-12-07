@@ -15,6 +15,7 @@ public class CadastroProduto extends javax.swing.JFrame {
    
     public CadastroProduto() {
         initComponents();
+        setResizable(false);
     }
 
     
@@ -233,11 +234,10 @@ public class CadastroProduto extends javax.swing.JFrame {
         int codigoProduto = Integer.parseInt(txtCodigoProduto.getText());
         double precoVenda = Double.parseDouble(txtPrecoVenda.getText());
         double precoAquisicao = Double.parseDouble(txtAquisicao.getText());
-        
-        
         double lucro = precoVenda - precoAquisicao;
+      
         
-        Produto produto = new Produto(nomeProduto, unidade, estoqueMinimo, quantidadeEstoque, codigoProduto, precoAquisicao, lucro,precoVenda);
+        Produto produto = new Produto(nomeProduto, unidade, estoqueMinimo, quantidadeEstoque, codigoProduto, precoAquisicao, precoVenda, lucro);
         produtoDAO.cadastrar(produto);
     }//GEN-LAST:event_btnCadastroActionPerformed
 

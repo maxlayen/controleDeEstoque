@@ -12,6 +12,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
     public CadastroFuncionario() {
         initComponents();
+        setResizable(false);
     }
 
     

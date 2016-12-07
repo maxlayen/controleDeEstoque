@@ -25,7 +25,7 @@ public class ProdutoDAO {
         return produtos;
     }
     
-    public Produto procurarProduto(int codigoProduto){
+    public Produto getProdutoByCodigo(int codigoProduto){
         for (Produto produto : produtos) {
             if (produto.getCodigo() == codigoProduto) {
                 return produto;
@@ -37,7 +37,7 @@ public class ProdutoDAO {
     
     public void atualizarProduto(Produto p){
         // Buscar o produto no arraylist
-        Produto produto = procurarProduto(p.getCodigo());
+        Produto produto = getProdutoByCodigo(p.getCodigo());
         
         produto.setNome(p.getNome());
         produto.setUnidade(p.getUnidade());
@@ -51,7 +51,7 @@ public class ProdutoDAO {
     }
     
     public void removerProduto(Produto p){
-        Produto produto = procurarProduto(p.getCodigo());
+        Produto produto = getProdutoByCodigo(p.getCodigo());
         produtos.remove(produto);
         gravarArquivo();
     }
@@ -94,7 +94,7 @@ public class ProdutoDAO {
             if (!f.exists()) {
                 f.createNewFile();
             }
-
+            
             fr = new FileReader(f);
             br = new BufferedReader(fr);
 
