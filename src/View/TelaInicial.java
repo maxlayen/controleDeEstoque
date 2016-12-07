@@ -38,7 +38,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jLabel1.setText("Controle de Estoque");
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas Vasconcelos\\Documents\\NetBeansProjects\\controleDeEstoque\\imgs\\application_add.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("/Users/lucasvasconcelos/NetBeansProjects/controleDeEstoque/imgs/application_add.png")); // NOI18N
         jButton1.setText("CADASTRAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,7 +47,7 @@ public class TelaInicial extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas Vasconcelos\\Documents\\NetBeansProjects\\controleDeEstoque\\imgs\\application_view_columns.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("/Users/lucasvasconcelos/NetBeansProjects/controleDeEstoque/imgs/application_view_columns.png")); // NOI18N
         jButton2.setText("LISTAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +56,7 @@ public class TelaInicial extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas Vasconcelos\\Documents\\NetBeansProjects\\controleDeEstoque\\imgs\\cancel.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon("/Users/lucasvasconcelos/NetBeansProjects/controleDeEstoque/imgs/cancel.png")); // NOI18N
         jButton3.setText("SAIR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,13 +73,13 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(143, 143, 143))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addComponent(jButton1)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,7 +91,7 @@ public class TelaInicial extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         pack();
