@@ -220,12 +220,12 @@ public class CadastroProduto extends javax.swing.JFrame {
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
     this.dispose();
-    new TelaLogin().setVisible(true);
+    new TelaInicial().setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroActionPerformed
         this.dispose();
-        new TelaLogin().setVisible(true);
+        new TelaInicial().setVisible(true);
         String nomeProduto = txtNome.getText();
         String unidade = txtUnidade.getText();
         int estoqueMinimo = Integer.parseInt(txtEstoqueMin.getText());
